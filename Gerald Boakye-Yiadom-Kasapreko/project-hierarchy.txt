@@ -1,0 +1,105 @@
+Assignment4
+├─ data_ingestion
+│  └─ docker-compose
+│     ├─ config
+│     ├─ dags
+│     │  ├─ airflow_dags.py
+│     │  ├─ data_generation
+│     │  │  ├─ data_generation.py
+│     │  │  └─ kasapreko_data.csv
+│     │  └─ __pycache__
+│     │     └─ airflow_dags.cpython-38.pyc
+│     ├─ docker-compose.yml
+│     ├─ logs
+│     │  ├─ dag_id=data_ingestion_dag
+│     │  │  ├─ run_id=manual__2024-04-01T163619.356967+0000
+│     │  │  │  └─ task_id=ingest_data_to_postgres
+│     │  │  │     ├─ attempt=1.log
+│     │  │  │     └─ attempt=2.log
+│     │  │  ├─ run_id=manual__2024-04-01T194116.156620+0000
+│     │  │  │  └─ task_id=ingest_data_to_postgres
+│     │  │  │     ├─ attempt=1.log
+│     │  │  │     └─ attempt=2.log
+│     │  │  ├─ run_id=manual__2024-04-01T201040.129205+0000
+│     │  │  │  └─ task_id=ingest_data_to_postgres
+│     │  │  │     ├─ attempt=1.log
+│     │  │  │     └─ attempt=2.log
+│     │  │  ├─ run_id=manual__2024-04-01T204823.695001+0000
+│     │  │  │  └─ task_id=ingest_data_to_postgres
+│     │  │  │     ├─ attempt=1.log
+│     │  │  │     └─ attempt=2.log
+│     │  │  ├─ run_id=scheduled__2024-03-29T000000+0000
+│     │  │  │  └─ task_id=ingest_data_to_postgres
+│     │  │  │     ├─ attempt=1.log
+│     │  │  │     └─ attempt=2.log
+│     │  │  ├─ run_id=scheduled__2024-03-30T000000+0000
+│     │  │  │  └─ task_id=ingest_data_to_postgres
+│     │  │  │     ├─ attempt=1.log
+│     │  │  │     └─ attempt=2.log
+│     │  │  └─ run_id=scheduled__2024-03-31T000000+0000
+│     │  │     └─ task_id=ingest_data_to_postgres
+│     │  │        ├─ attempt=1.log
+│     │  │        └─ attempt=2.log
+│     │  ├─ dag_processor_manager
+│     │  │  └─ dag_processor_manager.log
+│     │  └─ scheduler
+│     │     ├─ 2024-03-30
+│     │     ├─ 2024-04-01
+│     │     │  ├─ airflow_dags.py.log
+│     │     │  └─ native_dags
+│     │     │     └─ example_dags
+│     │     │        ├─ example_bash_operator.py.log
+│     │     │        ├─ example_branch_datetime_operator.py.log
+│     │     │        ├─ example_branch_day_of_week_operator.py.log
+│     │     │        ├─ example_branch_labels.py.log
+│     │     │        ├─ example_branch_operator.py.log
+│     │     │        ├─ example_branch_operator_decorator.py.log
+│     │     │        ├─ example_branch_python_dop_operator_3.py.log
+│     │     │        ├─ example_complex.py.log
+│     │     │        ├─ example_dag_decorator.py.log
+│     │     │        ├─ example_datasets.py.log
+│     │     │        ├─ example_dynamic_task_mapping.py.log
+│     │     │        ├─ example_dynamic_task_mapping_with_no_taskflow_operators.py.log
+│     │     │        ├─ example_external_task_marker_dag.py.log
+│     │     │        ├─ example_kubernetes_executor.py.log
+│     │     │        ├─ example_latest_only.py.log
+│     │     │        ├─ example_latest_only_with_trigger.py.log
+│     │     │        ├─ example_local_kubernetes_executor.py.log
+│     │     │        ├─ example_nested_branch_dag.py.log
+│     │     │        ├─ example_params_trigger_ui.py.log
+│     │     │        ├─ example_params_ui_tutorial.py.log
+│     │     │        ├─ example_passing_params_via_test_command.py.log
+│     │     │        ├─ example_python_decorator.py.log
+│     │     │        ├─ example_python_operator.py.log
+│     │     │        ├─ example_sensors.py.log
+│     │     │        ├─ example_sensor_decorator.py.log
+│     │     │        ├─ example_setup_teardown.py.log
+│     │     │        ├─ example_setup_teardown_taskflow.py.log
+│     │     │        ├─ example_short_circuit_decorator.py.log
+│     │     │        ├─ example_short_circuit_operator.py.log
+│     │     │        ├─ example_skip_dag.py.log
+│     │     │        ├─ example_sla_dag.py.log
+│     │     │        ├─ example_subdag_operator.py.log
+│     │     │        ├─ example_task_group.py.log
+│     │     │        ├─ example_task_group_decorator.py.log
+│     │     │        ├─ example_time_delta_sensor_async.py.log
+│     │     │        ├─ example_trigger_controller_dag.py.log
+│     │     │        ├─ example_trigger_target_dag.py.log
+│     │     │        ├─ example_xcom.py.log
+│     │     │        ├─ example_xcomargs.py.log
+│     │     │        ├─ plugins
+│     │     │        │  ├─ event_listener.py.log
+│     │     │        │  ├─ listener_plugin.py.log
+│     │     │        │  └─ workday.py.log
+│     │     │        ├─ subdags
+│     │     │        │  └─ subdag.py.log
+│     │     │        ├─ tutorial.py.log
+│     │     │        ├─ tutorial_dag.py.log
+│     │     │        ├─ tutorial_objectstorage.py.log
+│     │     │        ├─ tutorial_taskflow_api.py.log
+│     │     │        └─ tutorial_taskflow_api_virtualenv.py.log
+│     │     └─ latest
+│     └─ plugins
+├─ pipeline_diagram
+└─ sql_queries
+   └─ queries.sql
