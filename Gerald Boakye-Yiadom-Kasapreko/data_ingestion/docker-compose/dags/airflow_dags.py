@@ -3,7 +3,6 @@ from airflow.operators.python import PythonOperator
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 from datetime import datetime
 import csv
-import os
 
 default_args = {
     'owner': 'airflow',
@@ -11,15 +10,9 @@ default_args = {
     'retries': 1,
 }
 
-# Define the directory where the CSV file is located
-csv_directory = os.path.join(os.path.dirname(__file__), 'data_generation')
-
 def ingest_data_to_postgres():
-    # Construct the path to the CSV file
-    csv_file_path = os.path.join(csv_directory, 'kasapreko_data.csv')
-
     # Read data from CSV and ingest into PostgreSQL
-    with open(csv_file_path, 'r') as csvfile:
+    with open('/opt/airflow/data_generation/kasapreko_data.csv', 'r') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             # Insert row into PostgreSQL
@@ -43,3 +36,5 @@ with DAG('data_ingestion_dag', default_args=default_args, schedule_interval='@da
         task_id='ingest_data_to_postgres',
         python_callable=ingest_data_to_postgres,
     )
+
+
