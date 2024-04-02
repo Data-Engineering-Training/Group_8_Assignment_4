@@ -11,7 +11,7 @@
 ## Companies (71-80 from Ghana Club 100 Companies 2023) and Assigned Group Members
 - 71 Glico Healthcare - STEPHEN SAPPOR
 - 72 Ghana Rubber Estates Limited - ELVIS ASAMANI
-- 73 Kasapreko   GERALD BOAKYE-YIADOM
+- 73 Kasapreko - GERALD BOAKYE-YIADOM
 - 74 Papaye Fast Foods Ltd - KWAME OSEI TUTU AGYEMAN
 - 75 Alpha Industries Limited - ANGEL ADAAMBIIK
 - 76 Crocodile Matchets (Ghana) Ltd - PHILEMON FORSON
